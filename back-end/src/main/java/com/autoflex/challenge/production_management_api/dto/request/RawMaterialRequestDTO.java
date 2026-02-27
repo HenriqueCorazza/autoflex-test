@@ -1,12 +1,13 @@
 package com.autoflex.challenge.production_management_api.dto.request;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 
 public record RawMaterialRequestDTO(
-        @NotNull
+        @NotBlank
         String materialName,
-        @NotNull(message = "SKU code is required")
+        @NotBlank(message = "SKU code is required")
         String skuCode,
         @NotNull(message = "Quantity is required")
         @PositiveOrZero(message = "Must be a positive number")

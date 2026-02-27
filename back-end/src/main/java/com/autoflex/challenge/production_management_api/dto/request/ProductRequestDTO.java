@@ -11,6 +11,7 @@ import java.util.List;
 public record ProductRequestDTO(
         @NotBlank(message = "Product name is required")
     String productName,
+    @NotBlank
     String skuCode,
     @NotNull(message = "Product value cannot be null")
     @Positive(message = "Product value must be greater than zero")
