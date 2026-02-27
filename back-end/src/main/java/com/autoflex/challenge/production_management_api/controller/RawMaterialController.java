@@ -34,13 +34,13 @@ public class RawMaterialController {
         return ResponseEntity.status(HttpStatus.CREATED).body(rawMaterialService.createRawMaterial(rawMaterialRequestDTO));
     }
 
-    @PutMapping
-    public ResponseEntity<?> updateRawMaterial(@Valid @RequestBody RawMaterialRequestDTO rawMaterialRequestDTO, @RequestParam Long id) {
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateRawMaterial(@Valid @RequestBody RawMaterialRequestDTO rawMaterialRequestDTO, @PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK).body(rawMaterialService.updateRawMaterial(rawMaterialRequestDTO, id));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteRawMaterial(@RequestParam Long id) {
+    public ResponseEntity<?> deleteRawMaterial(@PathVariable Long id) {
         rawMaterialService.deleteRawMaterial(id);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }

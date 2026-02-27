@@ -64,9 +64,6 @@ public class ProductService {
 
     public List<ProductResponseDTO> getAllProducts(){
         List<Product> products = productRepository.findAll();
-        if (products.isEmpty()) {
-            throw new EntityNotFoundException("No products found");
-        }
         return products.stream().map(ProductResponseDTO::fromEntity).collect(Collectors.toList());
     }
 

@@ -45,8 +45,8 @@ public class ProductController {
     }
 
 
-    @PutMapping
-    public ResponseEntity<?> updateProduct(@Valid @RequestBody ProductRequestDTO productRequestDTO, @RequestParam Long id) {
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateProduct(@Valid @RequestBody ProductRequestDTO productRequestDTO, @PathVariable Long id) {
         return ResponseEntity.status(HttpStatus.OK).body(productService.updateProduct(id, productRequestDTO));
     }
 

@@ -21,9 +21,6 @@ public class RawMaterialService {
 
     public List<RawMaterialResponseDTO> getAllRawMaterials() {
         List<RawMaterial> rawMaterials = rawMaterialRepository.findAll();
-        if (rawMaterials.isEmpty()) {
-            throw new EntityNotFoundException("Raw materials not found");
-        }
         return rawMaterials.stream().map(RawMaterialResponseDTO::fromEntity).collect(Collectors.toList());
     }
 
