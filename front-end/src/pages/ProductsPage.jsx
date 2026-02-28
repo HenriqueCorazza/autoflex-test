@@ -164,19 +164,19 @@ export default function ProductsPage() {
                 <div className="form-row">
                   <div className="form-group">
                     <label className="form-label">Product Name *</label>
-                    <input className="form-input" value={form.productName}
+                    <input className="form-input" value={form.productName} data-cy="input-product-name"
                            onChange={e => setField('productName', e.target.value)} placeholder="e.g. Widget A" />
                   </div>
                   <div className="form-group">
                     <label className="form-label">SKU Code *</label>
-                    <input className="form-input" value={form.skuCode}
+                    <input className="form-input" value={form.skuCode} data-cy="input-sku"
                            onChange={e => setField('skuCode', e.target.value)} placeholder="e.g. WGT-001" />
                   </div>
                 </div>
 
                 <div className="form-group">
                   <label className="form-label">Value (R$) *</label>
-                  <input className="form-input" type="number" min="0" step="0.01"
+                  <input className="form-input" type="number" min="0" step="0.01" data-cy="input-value"
                          value={form.productValue} onChange={e => setField('productValue', e.target.value)}
                          placeholder="0.00" />
                 </div>

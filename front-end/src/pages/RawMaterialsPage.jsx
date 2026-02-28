@@ -123,19 +123,19 @@ export default function RawMaterialsPage() {
                 <div className="form-row">
                   <div className="form-group">
                     <label className="form-label">Material Name *</label>
-                    <input className="form-input" value={form.materialName}
+                    <input className="form-input" value={form.materialName} data-cy="input-material-name"
                            onChange={e => setField('materialName', e.target.value)} placeholder="e.g. Steel" />
                   </div>
                   <div className="form-group">
                     <label className="form-label">SKU Code *</label>
-                    <input className="form-input" value={form.skuCode}
+                    <input className="form-input" value={form.skuCode} data-cy="input-sku"
                            onChange={e => setField('skuCode', e.target.value)} placeholder="e.g. STL-001" />
                   </div>
                 </div>
 
                 <div className="form-group">
                   <label className="form-label">Stock Quantity *</label>
-                  <input className="form-input" type="number" min="0" value={form.stock}
+                  <input className="form-input" type="number" min="0" value={form.stock} data-cy="input-stock"
                          onChange={e => setField('stock', e.target.value)} placeholder="0" />
                 </div>
 
