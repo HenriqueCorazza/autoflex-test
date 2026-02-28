@@ -16,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/products")
+@CrossOrigin(origins = "https://front-end-autoflex.vercel.app")
 public class ProductController {
 
     private final ProductService productService;
