@@ -5,7 +5,7 @@ COPY pom.xml /app/
 
 COPY . /app/
 
-RUN mvn -f /app/pom.xml clean package -DskipTests
+RUN mvn -f /back-end/pom.xml clean package -DskipTests
 
 FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
