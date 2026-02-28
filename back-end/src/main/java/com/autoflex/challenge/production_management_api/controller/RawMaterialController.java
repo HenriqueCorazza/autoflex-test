@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/raw-materials")
+@CrossOrigin(origins = "https://front-end-autoflex.vercel.app")
 public class RawMaterialController {
 
     private final RawMaterialService rawMaterialService;
