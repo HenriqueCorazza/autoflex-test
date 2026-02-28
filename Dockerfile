@@ -5,13 +5,13 @@ WORKDIR /app
 COPY . .
 
 
-RUN mvn -f backend/pom.xml clean package -DskipTests
+RUN mvn -f back-end/pom.xml clean package -DskipTests
 
 
 FROM eclipse-temurin:17-jdk-jammy
 WORKDIR /app
 
-COPY --from=build /app/backend/target/*.jar app.jar
+COPY --from=build /app/back-end/target/*.jar app.jar
 
 COPY wallet /app/wallet
 
