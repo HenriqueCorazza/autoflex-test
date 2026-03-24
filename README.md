@@ -2,6 +2,27 @@
 
 Sistema full-stack para controle de estoque de matérias-primas e sugestão de produção com base na disponibilidade em estoque.
 
+## ⚠️ Status e Manutenção
+> **Projeto Descontinuado.** Os links de demonstração (Vercel/Render) foram desativados. O repositório permanece ativo para fins de portfólio e consulta de arquitetura.
+
+
+---
+
+## 🧠 Considerações de Desenvolvimento
+Este projeto foi executado sob uma restrição de tempo reduzida, conciliando o desenvolvimento com jornada de trabalho integral e reta final de graduação. 
+
+**Decisões Estratégicas:**
+* **Priorização de Backend:** Foco total na integridade dos dados e na precisão do algoritmo de sugestão.
+* **Arquitetura Desacoplada:** Uso de DTOs e camadas de serviço isoladas para facilitar a testabilidade (JUnit/Mockito).
+* **Documentação Viva:** Implementação do Swagger para garantir que a API fosse consumível desde o primeiro dia de desenvolvimento.
+
+**Próximos Passos (Backlog):**
+- [ ] Implementação de autenticação JWT.
+- [ ] Refinamento da UI/UX com bibliotecas de componentes (Tailwind/MUI).
+- [ ] Logs estruturados para monitoramento de erros em produção.
+
+---
+
 ## 🔗 Acesso ao Sistema
 
 | Serviço | URL |
@@ -29,6 +50,43 @@ Sistema full-stack para controle de estoque de matérias-primas e sugestão de p
 | **Deploy** | Vercel (frontend), Render (backend) |
 
 ---
+
+
+### 💻 System Overview
+Abaixo, as principais telas da aplicação demonstrando o fluxo de gerenciamento e o algoritmo de sugestão.
+
+<div align="center">
+  <table>
+    <tr>
+      <td width="50%">
+        <p align="center"><b>Products Screent</b></p>
+        <img src="Screenshot_1.jpg" alt="Products Screen">
+      </td>
+      <td width="50%">
+        <p align="center"><b>Raw Materials Screen</b></p>
+        <img src="Screenshot_2.jpg" alt="Raw Materials Screen">
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+        <p align="center"><b>Production Suggestions (Greedy Algo)</b></p>
+        <img src="Screenshot_4.jpg" alt="Suggestions Screen">
+      </td>
+      <td width="50%">
+        <p align="center"><b>Edit Products</b></p>
+        <img src="Screenshot_5.jpg" alt="Edit Products">
+      </td>
+    </tr>
+  </table>
+</div>
+
+### 🛠️ Technical Documentation (API & Tests)
+<details>
+  <summary><b>Click to expand Swagger API Documentation</b></summary>
+  <p align="center">
+    <img src="Screenshot_6.jpg" width="800" alt="Swagger UI Documentation">
+  </p>
+</details>
 
 ## 📁 Estrutura do Repositório
 
